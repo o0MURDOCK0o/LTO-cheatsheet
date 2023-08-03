@@ -42,3 +42,25 @@
 
 * -f, --file=*ARCHIVE*
     *   Use archive file or device _ARCHIVE_.
+
+### extract the contents of a tape ###
+
+```tar -xvf <tape device name> -C <path to the data destination>```
+
+*  -x, --extract, --get
+    *  Extract files from an archive.
+
+*  -v, --verbose
+    *  Verbosely list files processed.
+
+* -f, --file=*ARCHIVE*
+    *   Use archive file or device _ARCHIVE_.
+
+*  -C, --directory=*DIR*
+    *   Change to _DIR_ before performing any operations.
+
+### examples ###
+
+*   ```tar -cvf /dev/nst0 /tmp```  This command writes all data of the _/tmp_ directory to tape device number 1 without auto-rewinding the tape first
+*   ```tar -tvf /dev/st1```  This commond lists the contents of tape device number 2 after auto-rewinding the tape
+*   ```tar -xvf /dev/st0 -C /tmp```  This command extracts the contents of tape device number 1 to the _/tmp_ directory after auto-rewinding the tape

@@ -19,7 +19,7 @@
 
 ### writing to the tape ###
 
-```tar cvf <tape device name> <path to the data to be written>```
+```tar -cvf <tape device name> <path to the data to be written>```
 
 *  -c, --create
     *  Create a new archive.

@@ -90,3 +90,7 @@
 
 ```mtx -f /dev/sch[0-9] unload <slotnum> <drivenum>```
 
+### examples ###
+
+*  ```mtx -f /dev/sch0 load 4 0``` uses media changer number 1 to load the tape from slot number 4 into drive number 1
+*  ```mtx -f /dev/sch2 unload 2 3``` uses media changer number 3 to unload the tape from drive number 4 into slot number 2

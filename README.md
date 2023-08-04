@@ -1,5 +1,9 @@
 # LTO-cheatsheet #
 
+## list SCSI devices with _lsscsi_ ##
+
+```lsscsi``` lists all SCSI devices
+
 ## SCSI tape device names ##
 
 ### with auto-rewind ###
@@ -64,3 +68,25 @@
 *   ```tar -cvf /dev/nst0 /tmp```  This command writes all data of the _/tmp_ directory to tape device number 1 without auto-rewinding the tape first
 *   ```tar -tvf /dev/st1```  This commond lists the contents of tape device number 2 after auto-rewinding the tape
 *   ```tar -xvf /dev/st0 -C /tmp```  This command extracts the contents of tape device number 1 to the _/tmp_ directory after auto-rewinding the tape
+
+## interacting with the tape media changer/library using _mtx_ ##
+
+### inventory the library ###
+
+```mtx -f /dev/sch[0-9] invetory```
+
+* -f _Device_
+    *   Use device _Device_.
+
+### print the status of the media changer/library ###
+
+```mtx -f /dev/sch[0-9]```
+
+### load tape into the tape drive ###
+
+```mtx -f /dev/sch[0-9] load <slotnum> <drivenum>```
+
+### unload the tape from the tape drive into a free slot ###
+
+```mtx -f /dev/sch[0-9] unload <slotnum> <drivenum>```
+

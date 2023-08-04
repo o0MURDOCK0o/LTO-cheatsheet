@@ -80,7 +80,7 @@
 
 ### print the status of the media changer/library ###
 
-```mtx -f /dev/sch[0-9]```
+```mtx -f /dev/sch[0-9] status```
 
 ### load tape into the tape drive ###
 

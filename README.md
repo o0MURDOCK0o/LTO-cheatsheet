@@ -12,7 +12,7 @@
   
 ### without auto-rewind ###
 
-  ```/dev/nst[0-9]```
+  ```/dev/nst[0-9]``` usefull for writing multiple files to tape one by one
   
 ### examples ###
 
